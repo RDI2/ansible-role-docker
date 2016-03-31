@@ -9,8 +9,18 @@
     group: root
     mode: 0644
 
+- name: check kernel version
+  shell: uname -r
+  register: kernel_release
+  changed_when: False
+
 - name: install docker-engine
   yum: name=docker-engine state=present
+  notify: enable user_namespaces on kernel
 
 - name: start and enable docker service
   service: name=docker state=started enabled=yes
+
+- name: setup user namespaces
+  include: user_namespaces.yml
+  when: setup_user_namespaces

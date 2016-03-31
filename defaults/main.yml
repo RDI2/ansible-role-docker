@@ -1,2 +1,4 @@
 ---
 # defaults file for docker
+
+setup_user_namespaces: false

@@ -1,2 +1,5 @@
 ---
 # handlers file for docker
+
+- name: enable user_namespaces on kernel
+  shell: grubby --args="user_namespace.enable=1" --update-kernel=/boot/vmlinuz-{{ kernel_release.stdout }}
