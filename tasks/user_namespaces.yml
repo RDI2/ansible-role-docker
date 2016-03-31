@@ -1,0 +1,16 @@
+---
+# tasks/user_namespaces.yml
+
+- name: update docker.service
+  copy:
+    src: docker.service
+    dest: /usr/lib/systemd/system/docker.service
+    owner: root
+    group: root
+    mode: 0644
+
+- name: update subuid
+  copy: src=subuid dest=/etc/subuid owner=root group=root mode=0644
+
+- name: update subgid
+  copy: src=subgid dest=/etc/subgid owner=root group=root mode=0644
