@@ -1,6 +1,6 @@
 galaxy_info:
   author: Koji Tanaka
-  description:
+  description: Installs Docker
   company: Rutgers Discovery Informatics Institute
   license: MIT
   min_ansible_version: 1.9
