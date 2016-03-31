@@ -4,12 +4,9 @@ galaxy_info:
   company: Rutgers Discovery Informatics Institute
   license: MIT
   min_ansible_version: 1.9
-
   platforms:
   - name: EL
     versions:
     - 7
-
-  galaxy_tags: []
 
 dependencies: []
