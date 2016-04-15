@@ -1,6 +1,0 @@
----
-- hosts: all
-  vars:
-    setup_user_namespaces: true
-  roles:
-    - { role: "RDI2.docker" }

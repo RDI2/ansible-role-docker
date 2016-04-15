@@ -1,5 +1,6 @@
 ---
-- hosts: localhost
-  remote_user: root
+- hosts: all
+  vars:
+    setup_user_namespaces: true
   roles:
-    - docker
+    - { role: "RDI2.docker" }
